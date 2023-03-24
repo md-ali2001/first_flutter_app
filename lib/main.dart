@@ -76,17 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child: Container(
-        width: 200,
-        height: 100,
-        color: Colors.yellow,
-        child: TextButton(
-          onPressed: () {
-            print("buton tapped");
-          },
-          child: Text("click here"),
-        ),
-      )),
+        child: Container(
+            width: 200,
+            height: 100,
+            color: Colors.yellow,
+            child: Image.asset('assets/images/cart.png')),
+      ),
     );
   }
 }
