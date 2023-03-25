@@ -75,11 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Row(
+      body: Column(
         children: [
-          Container(width: 50, color: Colors.blue),
-          Expanded(child: Container(width: 50, color: Colors.green)),
-          Expanded(child: Container(width: 50, color: Colors.red)),
+          Container(height: 60, color: Colors.blue),
+          Container(height: 60, color: Colors.green),
+          Container(height: 60, color: Colors.red),
+          TextField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.black54))))
         ],
       ),
     );
