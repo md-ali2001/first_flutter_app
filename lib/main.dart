@@ -75,23 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text('A'),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [Text('B'), Text('B')]),
-          Text('C'),
-          //Image.asset('assets/images/cart.png'),
-          Text('A'),
-          Text('A'),
-          Text('A'),
-          Text('A'),
-          Container(height: 200, width: 200, color: Colors.black),
-          Container(height: 200, width: 200, color: Colors.black)
-        ],
-      ),
+      body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+              child: Column(
+            children: [
+              Container(height: 200, width: 200, color: Colors.yellow),
+              Container(height: 200, width: 200, color: Colors.black),
+              Container(height: 200, width: 200, color: Colors.pink)
+            ],
+          ))),
     );
   }
 }
