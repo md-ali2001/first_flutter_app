@@ -70,18 +70,26 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Container(
-            width: 200,
-            height: 100,
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: Center(
+          child: Container(
+            width: 700,
+            height: 700,
             color: Colors.yellow,
-            child: Image.asset('assets/images/cart.png')),
-      ),
-    );
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('A'),
+                Text('B'),
+                Text('C'),
+                Image.asset('assets/images/cart.png'),
+              ],
+            ),
+          ),
+        ));
   }
 }
