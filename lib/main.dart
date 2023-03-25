@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Muhammad Ali Masood',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Muhammad Ali Masood'),
     );
   }
 }
@@ -75,26 +75,22 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Container(
-        width: 700,
-        height: 1000,
-        color: Colors.yellow,
-        child: Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text('A'),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [Text('B'), Text('B')]),
-            Text('C'),
-            //Image.asset('assets/images/cart.png'),
-            Text('A'),
-            Text('A'),
-            Text('A'),
-            Text('A'),
-            Container(width: 700, height: 200, color: Colors.pink)
-          ],
-        ),
+      body: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text('A'),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [Text('B'), Text('B')]),
+          Text('C'),
+          //Image.asset('assets/images/cart.png'),
+          Text('A'),
+          Text('A'),
+          Text('A'),
+          Text('A'),
+          Container(height: 200, width: 200, color: Colors.black),
+          Container(height: 200, width: 200, color: Colors.black)
+        ],
       ),
     );
   }
