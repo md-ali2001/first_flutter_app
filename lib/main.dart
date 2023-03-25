@@ -82,11 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                   height: 200,
-                  child: Row(
-                    children: [
-                      Container(height: 200, width: 200, color: Colors.green),
-                      Container(height: 200, width: 200, color: Colors.yellow)
-                    ],
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(height: 200, width: 200, color: Colors.green),
+                        Container(height: 200, width: 200, color: Colors.yellow)
+                      ],
+                    ),
                   )),
               Container(height: 200, color: Colors.black),
               Container(height: 200, color: Colors.pink)
