@@ -84,7 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('A'),
-                Text('B'),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [Text('B'), Text('B')]),
                 Text('C'),
                 Image.asset('assets/images/cart.png'),
               ],
