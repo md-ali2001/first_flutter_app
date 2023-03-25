@@ -91,7 +91,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   )),
-              Container(height: 200, color: Colors.black),
+              Container(
+                height: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    border: Border.all(width: 20, color: Colors.blue),
+                    boxShadow: [BoxShadow(blurRadius: 11, spreadRadius: 13)],
+                    color: Colors.black),
+              ),
               Container(height: 200, color: Colors.pink)
             ],
           ))),
