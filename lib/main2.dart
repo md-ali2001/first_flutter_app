@@ -84,7 +84,12 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.black54))))
+                      borderSide: BorderSide(color: Colors.black54)))),
+          ListTile(
+              leading: Icon(Icons.person),
+              title: Text("NAME"),
+              subtitle: Text("mobile no."),
+              trailing: Icon(Icons.add))
         ],
       ),
     );
