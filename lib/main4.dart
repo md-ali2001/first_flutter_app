@@ -75,10 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: GridView.count(
-          crossAxisCount: 2,
-          crossAxisSpacing: 19,
-          mainAxisSpacing: 2,
+        body: GridView.extent(
+          maxCrossAxisExtent: 200,
+          crossAxisSpacing: 5,
+          mainAxisSpacing: 6,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
