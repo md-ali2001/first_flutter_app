@@ -90,14 +90,19 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("NAME"),
               subtitle: Text("mobile no."),
               trailing: Icon(Icons.add)),
-          Container(
-            width: 100,
-            height: 100,
-            child: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/download.png'),
-                backgroundColor: Colors.blue,
-                radius: 200),
-          )
+          Card(
+            elevation: 40,
+            shadowColor: Colors.blue,
+            child: Container(
+              width: 100,
+              height: 100,
+              child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/download.png'),
+                  backgroundColor: Colors.blue,
+                  radius: 200),
+            ),
+          ),
+          Card(child: Text('ali')),
         ],
       ),
     );
