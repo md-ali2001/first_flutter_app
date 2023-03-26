@@ -89,7 +89,15 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.person),
               title: Text("NAME"),
               subtitle: Text("mobile no."),
-              trailing: Icon(Icons.add))
+              trailing: Icon(Icons.add)),
+          Container(
+            width: 100,
+            height: 100,
+            child: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/download.png'),
+                backgroundColor: Colors.blue,
+                radius: 200),
+          )
         ],
       ),
     );
