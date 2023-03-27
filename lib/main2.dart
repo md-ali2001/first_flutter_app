@@ -48,17 +48,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter = _counter + 2;
-    });
+  callback() {
+    print("clicked");
   }
 
   @override
@@ -77,9 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Container(height: 60, color: Colors.blue),
-          Container(height: 60, color: Colors.green),
-          Container(height: 60, color: Colors.red),
+          Container(height: 20, color: Colors.blue),
+          Container(height: 20, color: Colors.green),
+          Container(height: 20, color: Colors.red),
           TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -103,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Card(child: Text('ali')),
+          ElevatedButton(onPressed: callback, child: Text("clicked"))
         ],
       ),
     );
