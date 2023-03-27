@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newpr/widgets/rounded_btn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -94,9 +95,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Card(child: Text('ali')),
-          ElevatedButton(onPressed: callback, child: Text("clicked"))
+          ElevatedButton(onPressed: callback, child: Text("clicked")),
+          RoundedButton(
+            btnname: 'login',
+            icon: Icon(Icons.lock),
+            callback: () {
+              print("logged in");
+            },
+            textStyle: mTextStyle16(),
+          )
         ],
       ),
     );
+  }
+
+  mTextStyle16() {
+    style:
+    TextStyle(fontWeight: FontWeight.bold);
   }
 }
