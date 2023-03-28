@@ -66,27 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: Wrap(
-          children: [
-            Container(width: 70, height: 70, color: Colors.blue),
-            Container(width: 70, height: 70, color: Colors.green),
-            Container(width: 70, height: 70, color: Colors.red),
-            Container(width: 70, height: 70, color: Colors.purple),
-            Container(width: 70, height: 70, color: Colors.black),
-            Container(width: 70, height: 70, color: Colors.brown),
-            Container(width: 70, height: 70, color: Colors.purple),
-            Container(width: 70, height: 70, color: Colors.black),
-            Container(width: 70, height: 70, color: Colors.brown),
-            Center(
-              child: SizedBox(
-                  width: 200,
-                  height: 100,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text('clicked'),
-                  )),
-            )
-          ],
-        ));
+        body: SizedBox.expand(
+            child: ElevatedButton(
+          onPressed: () {},
+          child: Text("ali masood"),
+        )));
   }
 }
