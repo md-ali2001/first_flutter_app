@@ -37,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var no1 = TextEditingController();
   var no2 = TextEditingController();
-  var count = 0;
+  var result = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,17 +65,49 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ElevatedButton(onPressed: () {}, child: Text('add')),
-                      ElevatedButton(onPressed: () {}, child: Text('sub')),
-                      ElevatedButton(onPressed: () {}, child: Text('mult')),
-                      ElevatedButton(onPressed: () {}, child: Text('div'))
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1.text.toString());
+                            var num2 = int.parse(no2.text.toString());
+                            setState(() {
+                              result = num1 + num2;
+                            });
+                          },
+                          child: Text('add')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1.text.toString());
+                            var num2 = int.parse(no2.text.toString());
+                            setState(() {
+                              result = num1 - num2;
+                            });
+                          },
+                          child: Text('sub')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1.text.toString());
+                            var num2 = int.parse(no2.text.toString());
+                            setState(() {
+                              result = num1 * num2;
+                            });
+                          },
+                          child: Text('mult')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1.text.toString());
+                            var num2 = int.parse(no2.text.toString());
+                            setState(() {
+                              result = (num1 / num2) as int;
+                            });
+                          },
+                          child: Text('div'))
                     ],
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "RESULT",
+                    "RESULT: $result",
                     style: TextStyle(fontSize: 30),
                   ),
                 )
