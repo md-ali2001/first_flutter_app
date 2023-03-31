@@ -35,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,10 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Counter',
+              'Counter: $count',
               style: TextStyle(fontSize: 29),
             ),
-            ElevatedButton(onPressed: () {}, child: Text('increment count'))
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    count++;
+                  });
+                },
+                child: Text('increment count'))
           ],
         ),
       ),
