@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             var num1 = int.parse(no1.text.toString());
                             var num2 = int.parse(no2.text.toString());
                             setState(() {
-                              result = (num1 / num2) as int;
+                              result = (num1 / num2).ceil();
                             });
                           },
                           child: Text('div'))
