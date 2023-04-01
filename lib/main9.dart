@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main10.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,17 +26,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: MyHomePage2(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage2 extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage2> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage2> {
   var no1 = TextEditingController();
   var no2 = TextEditingController();
   var result = 0;
@@ -110,7 +112,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     "RESULT: $result",
                     style: TextStyle(fontSize: 30),
                   ),
-                )
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyHomePage()));
+                    },
+                    child: Text('next'))
               ],
             ),
           ),
