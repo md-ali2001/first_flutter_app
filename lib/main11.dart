@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'main7.dart';
+
 class Spashscreen extends StatefulWidget {
   @override
   State<Spashscreen> createState() => _SpashscreenState();
@@ -10,7 +12,14 @@ class Spashscreen extends StatefulWidget {
 class _SpashscreenState extends State<Spashscreen> {
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {});
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context) => MyHomePage7(
+                    title: 'm',
+                  )));
+    });
   }
 
   @override
