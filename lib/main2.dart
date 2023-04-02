@@ -25,13 +25,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Muhammad Ali Masood'),
+      home: MyHomePage(title: 'Muhammad Ali Masood'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -43,6 +43,7 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
+  var _height = 200.2;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -52,6 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
   callback() {
     print("clicked");
   }
+
+  var _width = 100.1;
+  var _height = 200.2;
 
   @override
   Widget build(BuildContext context) {
@@ -67,44 +71,57 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          Container(height: 20, color: Colors.blue),
-          Container(height: 20, color: Colors.green),
-          Container(height: 20, color: Colors.red),
-          TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.black54)))),
-          ListTile(
-              leading: Icon(Icons.person),
-              title: Text("NAME"),
-              subtitle: Text("mobile no."),
-              trailing: Icon(Icons.add)),
-          Card(
-            elevation: 40,
-            shadowColor: Colors.blue,
-            child: Container(
-              width: 100,
-              height: 100,
-              child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/download.png'),
-                  backgroundColor: Colors.blue,
-                  radius: 200),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AnimatedContainer(
+              height: _height,
+              width: _width,
+              color: Colors.blue,
+              duration: Duration(seconds: 5),
             ),
-          ),
-          Card(child: Text('ali')),
-          ElevatedButton(onPressed: callback, child: Text("clicked")),
-          RoundedButton(
-            btnname: 'login',
-            icon: Icon(Icons.lock),
-            callback: () {
-              print("logged in");
-            },
-            textStyle: mTextStyle16(),
-          )
-        ],
+            TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide(color: Colors.black54)))),
+            ListTile(
+                leading: Icon(Icons.person),
+                title: Text("NAME"),
+                subtitle: Text("mobile no."),
+                trailing: Icon(Icons.add)),
+            Card(
+              elevation: 40,
+              shadowColor: Colors.blue,
+              child: Container(
+                width: 100,
+                height: 100,
+                child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/download.png'),
+                    backgroundColor: Colors.blue,
+                    radius: 200),
+              ),
+            ),
+            Card(child: Text('ali')),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    var swap = _height;
+                    _height = _width;
+                    _width = swap;
+                  });
+                },
+                child: Text("clicked")),
+            RoundedButton(
+              btnname: 'login',
+              icon: Icon(Icons.lock),
+              callback: () {
+                print("logged in");
+              },
+              textStyle: mTextStyle16(),
+            )
+          ],
+        ),
       ),
     );
   }
