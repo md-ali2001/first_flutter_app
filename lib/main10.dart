@@ -32,14 +32,20 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  String name;
+  MyHomePage(this.name);
+
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState(name);
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String name;
+  _MyHomePageState(this.name);
   var no1 = TextEditingController();
   var no2 = TextEditingController();
   var result = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ConstrainedBox(
         constraints: BoxConstraints(maxWidth: 200, maxHeight: 100),
         child: Text(
-          "ali masood , ali masood , ali masood , ali masood",
+          'NAME : $name',
           style: TextStyle(fontSize: 10),
         ),
       ),

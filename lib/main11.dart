@@ -29,7 +29,7 @@ class _SpashscreenState extends State<Spashscreen> {
       color: Colors.blue,
       child: Center(
         child: Text(
-          'ali masood',
+          'ali masood ',
           style: TextStyle(
               fontSize: 50, fontWeight: FontWeight.w700, color: Colors.white),
         ),

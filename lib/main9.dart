@@ -118,7 +118,8 @@ class _MyHomePageState extends State<MyHomePage2> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MyHomePage()));
+                              builder: (context) => MyHomePage(
+                                  "data passed from main9 to main10")));
                     },
                     child: Text('next'))
               ],
